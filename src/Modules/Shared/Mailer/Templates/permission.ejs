@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+      xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <!--##custom-font-resource##-->
+    <!--[if gte mso 16]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG />
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <style>
+        table,
+        td,
+        div,
+        h1,
+        h4,
+        b,
+        p {
+            font-family: Roboto, "Helvetica Neue", sans-serif;
+            color: #4b4f4e;
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0;background: #f4f6f9;">
+<table role="presentation"
+       style="width: 100%; border-collapse: collapse; border: 0; border-spacing: 0; background: #ffffff;">
+    <tr>
+        <td style="padding: 10px 20px;">
+            <a href="<%-frontend%>" style="display: flex; text-decoration: none; color:#000">
+                <img style="padding-top:8px;" src="<%-domain%>/assets/app-logo.svg" />
+                <span style="padding-top: 8px;font-size: 22px"><%-appname%><span>
+            </a>
+            </h3>
+        </td>
+    </tr>
+    <tr  align="center">
+        <td style="padding: 10px 20px;">
+            <p><b>
+                    <%-name%>
+                </b>(<a href="mailto:<%-email%>">
+                    <%-email%>
+                </a>) has requested
+                access to your g-calendar and zoom</p>
+        </td>
+    </tr>
+    <tr>
+        <table  align="center">
+            <td style="padding: 5px 20px; text-align: center; border:1px solid #58af9b; border-radius: 8px">
+                <table role="presentation" style="padding: 10px 20px;" align="center">
+                    <tr>
+                        <td>
+                            <img src="https://img.icons8.com/fluent/48/000000/google-calendar--v2.png"
+                                 alt="google calendar" width="60" height="60" />
+                        </td>
+                        <td>
+                            <img src="https://img.icons8.com/ios-filled/50/000000/long-arrow-left.png" />
+                        </td>
+                        <td>
+                            <img src="<%-photoUrl%>" alt="profile" width="60" height="60" style="border-radius: 50%;" />
+                        </td>
+                        <td>
+                            <img src="https://img.icons8.com/ios-filled/50/000000/long-arrow-right.png" />
+                        </td>
+                        <td>
+                            <img src="https://img.icons8.com/fluent/48/000000/zoom.png" width="60" height="60" />
+                        </td>
+                    </tr>
+                </table>
+                <table align="center">
+                    <tr>
+                        <td>
+                            <h4 style="text-transform: capitalize;">Actions that will be performed on your behalf</h4>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td style="border-bottom: 1px solid #58af9b; padding: 10px 10px;">Create calendar events</td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom: 1px solid #58af9b; padding: 10px 10px;">Add and remove attendees to
+                            calendar events</td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom: 1px solid #58af9b; padding: 10px 10px;">Generate zoom meeting links</td>
+                    </tr>
+                    <tr >
+                        <td style="border-bottom: 1px solid #58af9b; padding: 10px 10px;">Generate google meet links</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top: 20px">
+                            <a style="display: block; text-decoration: none; border: none; outline: none; border-radius: 30px; padding: 8px 20px; width: 90%; cursor: pointer; background-color: #58af9b; color: #ffffff;"
+                               role="submit" href="<%-redirectUrl%>">
+                                Grant Permission
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </table>
+    </tr>
+    <tr style="background: #ffffff;">
+        <table role="presentation"
+               style="width: 100%; border-collapse: collapse; border: 0; border-spacing: 0; background: #ffffff;margin-top: 30px">
+            <td align="center" style="padding: 20px;">
+                <b>&copy; Calley.co, <%-year%></b>
+            </td>
+        </table>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,4 @@
+node_modules
+dist
+src/database/migrations
+src/Database/seeders

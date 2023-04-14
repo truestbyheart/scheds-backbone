@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Connectedly | Accept Invite</title>
+    <style>
+        .col>a.btn>img {
+            width: 30px !important;
+        }
+
+        .btn {
+            border: 1px solid #eee;
+        }
+
+        .col {
+            flex-grow: 0 !important;
+        }
+    </style>
+</head>
+
+<body style="background-color: #F4F6F9">
+    <div class="container-fluid">
+
+        <div class="row">
+            <nav class="navbar navbar-light bg-light w-100" style="background-color: #ffffff !important;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="<%-frontend%>">Connectedly</a>
+                </div>
+            </nav>
+        </div>
+        <% if (!hasBooked) {%>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="card mt-4 p-3">
+                        <div class="w-100 text-center">
+                            <img src="/assets/scheduling.svg" alt="svg" width="220px" />
+                        </div>
+
+                        <div class="card-body p-3">
+                            <h3 class="card-title text-capitalize">
+                                <%-title%>
+                            </h3>
+                            <p class="text-muted" style="font-size: .87rem;">
+                                <%-date%>&nbsp;<%-from%> - <%-to%>
+                            </p>
+                            <p class="card-text text-justify">
+                                <%-description%>
+                            </p>
+                            <div class="card text-center">
+                                <p class="card-tiltle font-weight-bold text-capitalize mt-2">Add the event to your
+                                    calendar of choice</p>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-2"></div>
+                                        <div class="col">
+                                            <a href="<%-calendarLinks.google%>" class="btn">
+                                                <img
+                                                    src="https://img.icons8.com/fluent/48/000000/google-calendar--v1.png" />
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a href="<%-calendarLinks.yahoo%>" class="btn">
+                                                <img
+                                                    src="https://img.icons8.com/color/48/000000/outlook-calendar.png" />
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a href="<%-calendarLinks.yahoo%>" class="btn">
+                                                <img src="https://img.icons8.com/color/48/000000/yahoo.png" />
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a href="<%-calendarLinks.ics%>" class="btn" download="<%-title%>"
+                                                title="<%-title%>">
+                                                <img src="https://img.icons8.com/pastel-glyph/64/000000/download.png" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <p% } else {%>
+                <div class="row mt-4">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="card p-3">
+                            <div class="w-100 text-center">
+                                <img src="/assets/booked.svg" alt="svg" width="220px" />
+                                <h5 class="card-title"><%-message%></h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="card text-center">
+                                    <p class="card-tiltle font-weight-bold text-capitalize mt-2">Add the event to your
+                                        calendar of choice</p>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-2"></div>
+                                            <div class="col">
+                                                <a href="<%-calendarLinks.google%>" class="btn">
+                                                    <img src="https://img.icons8.com/fluent/48/000000/google-calendar--v1.png" />
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="<%-calendarLinks.yahoo%>" class="btn">
+                                                    <img src="https://img.icons8.com/color/48/000000/outlook-calendar.png" />
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="<%-calendarLinks.yahoo%>" class="btn">
+                                                    <img src="https://img.icons8.com/color/48/000000/yahoo.png" />
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="<%-calendarLinks.ics%>" class="btn" download="<%-title%>" title="<%-title%>">
+                                                    <img src="https://img.icons8.com/pastel-glyph/64/000000/download.png" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+                <%}%>
+                    <div class="row mt-4">
+                        <nav class="navbar navbar-light bg-light w-100" style="background-color: #ffffff !important;">
+                            <div class="container-fluid">
+                                <div class="w-100 text-center">
+                                    <a class="navbar-brand" href="<%-frontend%>">Connectedly, <%-year%></a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+    </div>
+</body>
+
+</html>
